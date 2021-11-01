@@ -19,15 +19,15 @@ export default class Command extends BaseCommand {
         const percentage = Math.floor(Math.random() * 100)
         let sentence
         if (percentage < 25) {
-            sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\t\tThere's still time to reconsider your choices`
+            sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\t\tThere's still time to reconsider your choices.(FIND A NEW GIRL OR A BOY😝😝😝`
         } else if (percentage < 50) {
-            sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\t\t Good enough, I guess! 💫`
+            sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\t\t Good enough, I guess! 💫. GO ON A DATE WITH HER OR HIM 💖`
         } else if (percentage < 75) {
-            sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\t\t\tStay together and you'll find a way ⭐️`
+            sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\t\t\tStay together and you'll find a way ⭐️. DATEEEEEEEE💖`
         } else if (percentage < 90) {
-            sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\tAmazing! You two will be a good couple 💖 `
+            sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\tAmazing! You two will be a good couple 💖.  `
         } else {
-            sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\tYou two are fated to be together 💙`
+            sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\tYou two are fated to be together 💙.I wanna see you guys children 😊💕💖`
         }
 
         if (M.quoted?.sender && !M.mentioned.includes(M.quoted.sender)) M.mentioned.push(M.quoted.sender)
@@ -48,7 +48,7 @@ export default class Command extends BaseCommand {
         })
         // choose a random gif from the array
         const gifLink = ship[Math.floor(Math.random() * ship.length)].gifLink
-        let caption = `\t❣️ *Matchmaking...* ❣️ \n`
+        let caption = `\t💖❣️ *Matchmaking...* ❣️💖 \n`
         caption += `\t\t---------------------------------\n`
         caption += `@${user1.split('@')[0]}  x  @${user2.split('@')[0]}\n`
         caption += `\t\t---------------------------------\n`
