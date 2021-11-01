@@ -23,12 +23,12 @@ export default class Command extends BaseCommand {
         const command = this.handler.commands.get(key) || this.handler.aliases.get(key)
         if (feature) {
             const data = await this.client.getFeatures(feature)
-            if (data.state) return void M.reply(`🟨 *${this.client.util.capitalize(feature)}* is already *active*`)
+            if (data.state) return void M.reply(`🟨🚀 *${this.client.util.capitalize(feature)}* is already *active* can't you see 😀`)
             await this.client.DB.feature.updateOne({ feature: feature }, { $set: { state: true } }).catch(() => {
-                return void M.reply(`🟨 *${this.client.util.capitalize(feature)}* failed to enable`)
+                return void M.reply(`🟨🚀 *${this.client.util.capitalize(feature)}* failed to enable. CONGRATULATIONS ON FAILING `)
             })
             this.client.features.set('chatbot', true)
-            return void M.reply(`🟩 *${this.client.util.capitalize(feature)}* is now active`)
+            return void M.reply(`🟩💖 *${this.client.util.capitalize(feature)}* is now active. WHAT ABOUT OUR DATE🥺?`)
         }
         if (!command) return void (await M.reply(`No command found`))
         if (!(await this.client.DB.disabledcommands.findOne({ command: command.config.command })))
