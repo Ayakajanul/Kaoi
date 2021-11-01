@@ -28,7 +28,7 @@ export default class Command extends BaseCommand {
                 return void M.reply(`🟨🚀 *${this.client.util.capitalize(feature)}* could not be disabled bakaaa`)
             })
             this.client.features.set('chatbot', false)
-            return void M.reply(`🟩💖 *${this.client.util.capitalize(feature)}* is now inactive darling 💖`)
+            return void M.reply(`�🟩💕 *${this.client.util.capitalize(feature)}* is now inactive darling 💖`)
         }
         const command = this.handler.commands.get(key) || this.handler.aliases.get(key)
         if (!command) return void (await M.reply(`No command found`))
